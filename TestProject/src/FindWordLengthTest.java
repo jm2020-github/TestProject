@@ -14,7 +14,7 @@ public class FindWordLengthTest {
 	@Test
 	public void testFindLongestWordLength() {
 		String message = "The cow jumped over the moon.";
-
+		System.out.println("Running testFindLongestWordLength with input sentence: " + message);
 		int length = FindWordLength.findLongestWord(message).length();
 		assertEquals(6, length);
 	}
@@ -22,7 +22,7 @@ public class FindWordLengthTest {
 	@Test
 	public void testFindLongestWord() {
 		String message = "The cow jumped over the moon.";
-
+		System.out.println("Running testFindLongestWord with input sentence: " + message);
 		String word = FindWordLength.findLongestWord(message);
 		assertEquals("jumped", word);
 	}
@@ -30,22 +30,20 @@ public class FindWordLengthTest {
 	@Test
 	public void testFindShortestWordLength() {
 		String message = "The cow jumped over the moon.";
-
+		System.out.println("Running testFindShortestWordLength with input sentence: " + message);
 		int length = FindWordLength.findShortestWord(message).length();
 		assertEquals(3, length);
 	}
 	   
 	@Test
-	public void testFindShortestWord() {
-		
+	public void testFindShortestWord() {		
 		String message = "The cow jumped over the moon.";
 		 List<String> list = new ArrayList<String>( 
 		            Arrays.asList("The",
 		                          "cow", 
 		                          "the")); 
-
-		String word = FindWordLength.findShortestWord(message);
-				
+		System.out.println("Running testFindShortestWord with input sentence: " + message);
+		String word = FindWordLength.findShortestWord(message);		
 		assertTrue(list.contains(word));
 	}
 }
